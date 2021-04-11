@@ -1,15 +1,15 @@
-# arr = [1,4,2,5,30]
-def bubble_sort(arr)
-  as = arr.size - 1
-  while as > 1
-    (0..as-1).each do |i|
-      if arr[i] > arr[i+1]
-        s = arr[i+1]
-        arr[i+1] = arr[i]
-        arr[i] = s
+# array = [1,4,2,5,30]
+def bubble_sort(array)
+  array_size = array.size - 1
+  while array_size > 1
+    (0..array_size-1).each do |i|
+      if array[i] > array[i+1]
+        array_freeze = array[i+1]
+        array[i+1] = array[i]
+        array[i] = array_freeze
       end
     end
-    as-=1
+    array_size-=1
   end
-  arr
+  array
 end

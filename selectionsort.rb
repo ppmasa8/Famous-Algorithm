@@ -1,9 +1,9 @@
-# arr = [1,6,3,9,60,47,5]
-def selection_sort(arr)
-  newarr = []
-  (arr.size).times do
-    newarr << arr.min
-    arr.delete(arr.min)
+# array = [1,6,3,9,60,47,5]
+def selection_sort(array)
+  new_array = []
+  (array.size).times do
+    new_array << array.min
+    array.delete(array.min)
   end
-  newarr
+  new_array
 end

@@ -1,9 +1,9 @@
-# arr = [1,5,3,7,320]
-def insert_sort(arr)
-  newarr = []
-  arr.each do |a|
-    newarr << a
-    newarr.sort!
+# array = [1,5,3,7,320]
+def insert_sort(array)
+  new_array = []
+  array.each do |ai|
+    new_array << ai
+    new_array.sort!
   end
-  newarr
+  new_array
 end
