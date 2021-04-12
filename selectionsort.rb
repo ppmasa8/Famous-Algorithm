@@ -7,3 +7,6 @@ def selection_sort(array)
   end
   new_array
 end
+
+array = Array.new(10){ rand(100) }
+puts selection_sort(array)

@@ -13,3 +13,6 @@ def bubble_sort(array)
   end
   array
 end
+
+array = Array.new(10){ rand(100) }
+puts bubble_sort(array)
