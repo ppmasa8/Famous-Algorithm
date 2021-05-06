@@ -36,3 +36,7 @@
 🔵 素数判定法
 
 🔵 ハノイの塔
+
+## REFERNCES
+- 「アルゴリズム図鑑」
+- https://github.com/kumar91gopi/Algorithms-and-Data-Structures-in-Ruby
