@@ -1,5 +1,5 @@
 # a is array,key is value.
-def binary_search(a,key) 
+def binary_search(a,key)
   lo  = 0
   hi  = a.size - 1
 
