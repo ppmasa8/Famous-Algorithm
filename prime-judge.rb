@@ -13,3 +13,6 @@ def prime_judge(array)
   return prime_list
 end
 
+array = Array.new(10){ rand(100) }
+puts prime_judge(array)
+
