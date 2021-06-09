@@ -5,7 +5,7 @@ def prime_judge(array)
 # 一つずつ数字を見ていく
   array.each do |num|
     prime = true
-    (2...Math.sqrt(num)).each do |i|
+    (2..Math.sqrt(num)).each do |i|
        prime = false if num%i == 0
     end
     prime_list << num if prime
