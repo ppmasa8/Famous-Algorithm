@@ -1,18 +1,20 @@
 # array = [1,4,2,5,30]
-def bubble_sort(array)
-  array_size = array.size - 1
-  while array_size > 1
-    (0..array_size-1).each do |i|
-      if array[i] > array[i+1]
-        array_freeze = array[i+1]
-        array[i+1] = array[i]
-        array[i] = array_freeze
+class Array
+  def bubble_sort
+    array_size = self.size - 1
+    while array_size > 1
+      (0..array_size-1).each do |i|
+        if self[i] > self[i+1]
+          array_freeze = self[i+1]
+          self[i+1] = self[i]
+          self[i] = array_freeze
+        end
       end
+      array_size-=1
     end
-    array_size-=1
+    self
   end
-  array
 end
 
 array = Array.new(10){ rand(100) }
-puts bubble_sort(array)
+puts array.bubble_sort

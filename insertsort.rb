@@ -1,12 +1,14 @@
 # array = [1,5,3,7,320]
-def insert_sort(array)
-  new_array = []
-  array.each do |ai|
-    new_array << ai
-    new_array.sort!
+class Array
+  def insert_sort
+    new_array = []
+    self.each do |ai|
+      new_array << ai
+      new_array.sort!
+    end
+    new_array
   end
-  new_array
 end
 
 array = Array.new(10){ rand(100) }
-puts insert_sort(array)
+puts array.insert_sort
