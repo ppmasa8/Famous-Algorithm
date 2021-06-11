@@ -1,12 +1,16 @@
 # array = [1,5,3,7,320]
 class Array
   def insert_sort
-    new_array = []
-    self.each do |ai|
-      new_array << ai
-      new_array.sort!
+    (1...self.size).each do |i|
+      temp = self[i]
+      num  = i - 1
+      while num >= 0 && self[num] > temp
+        self[num + 1] = self[num]
+        num -= 1
+      end
+      self[num + 1] = temp
     end
-    new_array
+    self
   end
 end
 
