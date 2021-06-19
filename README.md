@@ -37,6 +37,8 @@
 
 🔵 ハノイの塔
 
+✅ フィボナッチ数列
+
 ## REFERNCES
 - 「アルゴリズム図鑑」
 - https://github.com/kumar91gopi/Algorithms-and-Data-Structures-in-Ruby
