@@ -1,22 +1,27 @@
 class Array
-  def quick_sort
-    return self if self.size < 2
+  require 'benchmark'
 
-    pivot = self.shift
+  result = Benchmark.realtime do
+    def quick_sort
+      return self if self.size < 2
 
-    big   = []
-    small = []
-    self.each do |num|
-      if num < pivot
-        small << num
-      else
-        big << num
+      pivot = self.shift
+
+      big   = []
+      small = []
+      self.each do |num|
+        if num < pivot
+          small << num
+        else
+          big << num
+        end
       end
+
+      small.quick_sort + [pivot] + big.quick_sort
     end
-
-    small.quick_sort + [pivot] + big.quick_sort
+    array = Array.new(1000){ rand(10000) }
+    p array
+    p array.quick_sort
   end
+  puts "実行時間 #{result}s"
 end
-
-array = Array.new(10){ rand(100) }
-puts array.quick_sort
