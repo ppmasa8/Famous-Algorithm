@@ -1,8 +1,7 @@
 def check_sum_trick(arr)
-  tmp = push_sum(arr)
+  temp = push_sum(arr)
   ## Here is to generate error.
-  bug(arr)
-  arr.sum == tmp[-2, 2]
+  temp == arr[-1]
 end
 
 def push_sum(arr)
@@ -10,12 +9,9 @@ def push_sum(arr)
   arr.each.with_index(1) do |elem, i|
     sum += elem * i
   end
-  tmp << sum.to_a
+  tmp << sum
   tmp.flatten!
-end
-
-def bug(arr)
-  
+  return tmp[-1]
 end
 
 arr = [4,5,6,5,7]
