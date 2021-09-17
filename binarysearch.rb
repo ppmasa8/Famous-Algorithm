@@ -6,7 +6,7 @@ def binary_search(a,key)
   while lo <= hi
     mid = (lo + hi) / 2
     if a[mid] == key
-      return a[mid]
+      return mid
     elsif a[mid] < key
       lo = mid + 1
     else
