@@ -3,21 +3,11 @@ class Array
 
   result = Benchmark.realtime do
     def quick_sort
-      return self if self.size < 2
-
-      pivot = self.shift
-
-      big   = []
-      small = []
-      self.each do |num|
-        if num < pivot
-          small << num
-        else
-          big << num
-        end
-      end
-
-      small.quick_sort + [pivot] + big.quick_sort
+      return self if size <= 1
+      pivot = pop
+      smaller, bigger = partition{|n| n < pivot}
+      push pivot
+      smaller.quick_sort + [pivot] + bigger.quick_sort
     end
     array = Array.new(1000){ rand(10000) }
     p array
